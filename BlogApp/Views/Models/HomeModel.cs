@@ -5,8 +5,8 @@ using System.Web;
 
 namespace BlogApp.Views.Models
 {
-    public class RecentPostsModel
+    public class HomeModel
     {
-        public ICollection<RecentPostItemModel> Items{ get; set; }
+        public RecentPostsModel RecentPosts { get; set; }
     }
 }
