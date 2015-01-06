@@ -7,5 +7,7 @@ namespace BlogApp.Views.Models
 {
     public class LikeModel
     {
+        public string social { get; set;  }
+        public int likesCount { get; set; }
     }
 }

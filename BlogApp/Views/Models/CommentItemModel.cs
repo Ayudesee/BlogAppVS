@@ -7,5 +7,14 @@ namespace BlogApp.Views.Models
 {
     public class CommentItemModel
     {
+        CommentItemModel()
+        {
+            Username = "Anonimous";
+            Body = "SOME COMMENT";
+            Date = DateTime.Now;
+        }
+        public string Username { get; set; }
+        public string Body { get; set; }
+        public DateTime Date { get; set; }
     }
 }

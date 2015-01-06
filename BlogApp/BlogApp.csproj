@@ -131,7 +131,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Models\ArticleModel.cs" />
+    <Compile Include="Views\Models\CommentItemModel.cs" />
     <Compile Include="Views\Models\HomeModel.cs" />
+    <Compile Include="Views\Models\LikeModel.cs" />
+    <Compile Include="Views\Models\RecentCommentItemModel.cs" />
+    <Compile Include="Views\Models\RecentCommentsModel.cs" />
     <Compile Include="Views\Models\RecentPostItemModel.cs" />
     <Compile Include="Views\Models\RecentPostsModel.cs" />
   </ItemGroup>

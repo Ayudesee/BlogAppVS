@@ -13,7 +13,9 @@ namespace BlogApp.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var model = new BlogApp.Views.Models.HomeModel();
+            //model.Body = "<p>1111111111111111111<p>";
+            return View(model);
         }
 
     }
