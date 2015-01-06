@@ -19,7 +19,7 @@ namespace BlogApp
 
            // WebApiConfig.Register(GlobalConfiguration.Configuration);
            // FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            ModelBinders.Binders.Add(typeof(AddCommentModel), new MyModelBinder());
+            //ModelBinders.Binders.Add(typeof(AddCommentModel), new MyModelBinder());
             RouteConfig.RegisterRoutes(RouteTable.Routes);
            // BundleConfig.RegisterBundles(BundleTable.Bundles);
         }

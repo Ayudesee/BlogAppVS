@@ -23,6 +23,8 @@ namespace BlogApp.Controllers
         [HttpPost]
         public ActionResult Index(AddCommentModel model)
         {
+            if (!string.IsNullOrWhiteSpace(model.Comment))
+                CommentsRepository.Comments.Add(model.Comment);
             return View(new ArticleModel());
         }
         
