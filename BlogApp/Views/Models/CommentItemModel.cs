@@ -13,6 +13,11 @@ namespace BlogApp.Views.Models
             Body = "SOME COMMENT";
             Date = DateTime.Now;
         }
+        public CommentItemModel(string Username, string comment)
+        {
+            this.Username = Username;
+            this.Body = comment;
+        }
         public string Username { get; set; }
         public string Body { get; set; }
         public DateTime Date { get; set; }

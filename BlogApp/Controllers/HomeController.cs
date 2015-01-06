@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BlogApp.Repository;
+using BlogApp.Views.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,12 +12,28 @@ namespace BlogApp.Controllers
     {
         //
         // GET: /Home/
-
-        public ActionResult Index(int id = 0)
+        [HttpPost]
+        public ActionResult Index(AddCommentModel model)
         {
-            var model = new BlogApp.Views.Models.ArticleModel();
+            if (!string.IsNullOrWhiteSpace(model.Comment))
+            {
+                CommentsRepository.Comments.Add(model.Comment);
+            }
+            return View(model);
+        }
+        [HttpGet]
+        public ActionResult Index()
+        {
+            string query = Request.QueryString["Foo"];
+            var model = new ArticleModel();
             return View(model);
         }
 
+        
+
+        //public ActionResult AddComment(AddCommentModel model)
+        //{
+        //    return RedirectToAction("Index", "Home");
+        //}
     }
 }

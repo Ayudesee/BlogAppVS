@@ -31,12 +31,5 @@
             </li>
         }
     </ul>
-    <div class="add-comment">
-        <textarea name="" placeholder="Ваш комментарий" class="txt-area"></textarea>
-        <div class="wrap-btn">
-            <button class="btn-cancel">Отмена</button>
-            <button class="btn-save">Отправить</button>
-            @*<p>Lorem ipsum dolor sit amet, <a href="#">adipiscing</a></p>*@
-        </div>
-    </div>
+    @Html.Partial("~/Views/Home/AddComment.cshtml", null, new ViewDataDictionary())
 </div>
