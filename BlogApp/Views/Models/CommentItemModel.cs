@@ -7,7 +7,7 @@ namespace BlogApp.Views.Models
 {
     public class CommentItemModel
     {
-        CommentItemModel()
+        public CommentItemModel()
         {
             Username = "Anonimous";
             Body = "SOME COMMENT";

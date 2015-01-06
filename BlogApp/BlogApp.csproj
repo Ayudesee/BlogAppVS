@@ -142,6 +142,7 @@
     <Compile Include="Views\Models\RecentCommentsModel.cs" />
     <Compile Include="Views\Models\RecentPostItemModel.cs" />
     <Compile Include="Views\Models\RecentPostsModel.cs" />
+    <Compile Include="Views\Models\RegistrationModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\reset.css" />
@@ -186,6 +187,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Post\Recent.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Entry.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

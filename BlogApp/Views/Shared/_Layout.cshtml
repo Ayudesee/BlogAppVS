@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <div class ="registration">
+        <a href="~/Views/Shared/Entry.cshtml"><button class="btn-entry">Войти</button></a>
+        <button class="btn-reg">Зарегистрироваться</button>
+    </div>
     <div class="wrap">
         <div class="left-column">
             <div class="wrap-avatar">
@@ -31,7 +35,8 @@
         </div>
         <div class="right-column">
             @RenderBody()
+            @*Html.Action("Index", "Home")*@
         </div>
     </div>
 </body>
-</html>
+@*</html>*@

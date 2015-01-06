@@ -10,8 +10,12 @@ namespace BlogApp.Views.Models
     {
         public HomeModel()
         {
-            Article = new ArticleModel();
+           // if (Modelname.Equals("Article"))
+                Article = new ArticleModel();
+            //else
+            //    Registration = new RegistrationModel();
         }
+        public RegistrationModel Registration { get; set; }
         public ArticleModel Article { get; set; }
     }
 }

@@ -15,7 +15,12 @@ namespace BlogApp.Controllers
         public ActionResult Recent()
         {
             var model = new ArticleModel();
-            return View();
+            return View(model);
+        }
+        public ActionResult Registration()
+        {
+            var model = new RegistrationModel();
+            return View(model);
         }
 
     }

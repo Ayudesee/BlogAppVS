@@ -11,10 +11,12 @@ namespace BlogApp.Views.Models
         public ArticleModel()
         {
             Title = "About Me";
-            Body = "<p>Шараев Владислав. Учусь в БГУИР по специальности \"инженер-системотехник\".<p>.<p>.<p>.<p>.<p>.<p>.<p>.</p>";
+            Body = "<p>Шараев Владислав. Учусь в БГУИР по специальности \"инженер-системотехник\"</p>";
             Date = DateTime.Now;
             Likes = new Collection<LikeModel>();
             Comments = new Collection<CommentItemModel>();
+            Likes.Add(new LikeModel());
+            Comments.Add(new CommentItemModel());
         }
         public string Title { get; set; }
         public string Body { get; set; } 
