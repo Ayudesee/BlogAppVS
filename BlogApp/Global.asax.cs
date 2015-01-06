@@ -1,5 +1,4 @@
 ﻿using BlogApp.Views.Models;
-using BlogApp.Views.Models.Binders;
 using System;
 using System.Collections.Generic;
 using System.Linq;

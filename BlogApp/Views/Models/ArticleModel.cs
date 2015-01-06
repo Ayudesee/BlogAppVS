@@ -31,6 +31,6 @@ namespace BlogApp.Views.Models
                 return CommentsRepository.Comments; 
             }
         }
-        //public ICollection<CommentItemModel> Comments { get; set; }
+        //public AddCommentModel NewComment { get; set; }
     }
 }
