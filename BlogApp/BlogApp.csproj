@@ -138,6 +138,7 @@
     <Compile Include="Repository\CountryRepository.cs" />
     <Compile Include="Views\Models\AddCommentModel.cs" />
     <Compile Include="Views\Models\ArticleModel.cs" />
+    <Compile Include="Views\Models\Binders\MyModelBinder.cs" />
     <Compile Include="Views\Models\CommentItemModel.cs" />
     <Compile Include="Views\Models\HomeModel.cs" />
     <Compile Include="Views\Models\LikeModel.cs" />

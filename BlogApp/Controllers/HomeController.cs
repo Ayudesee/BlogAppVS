@@ -12,15 +12,7 @@ namespace BlogApp.Controllers
     {
         //
         // GET: /Home/
-        [HttpPost]
-        public ActionResult Index(AddCommentModel model)
-        {
-            if (!string.IsNullOrWhiteSpace(model.Comment))
-            {
-                CommentsRepository.Comments.Add(model.Comment);
-            }
-            return View(model);
-        }
+      
         [HttpGet]
         public ActionResult Index()
         {
@@ -28,7 +20,11 @@ namespace BlogApp.Controllers
             var model = new ArticleModel();
             return View(model);
         }
-
+        [HttpPost]
+        public ActionResult Index(AddCommentModel model)
+        {
+            return View(new ArticleModel());
+        }
         
 
         //public ActionResult AddComment(AddCommentModel model)

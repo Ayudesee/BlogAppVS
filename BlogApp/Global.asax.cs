@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BlogApp.Views.Models;
+using BlogApp.Views.Models.Binders;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,6 +19,7 @@ namespace BlogApp
 
            // WebApiConfig.Register(GlobalConfiguration.Configuration);
            // FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            ModelBinders.Binders.Add(typeof(AddCommentModel), new MyModelBinder());
             RouteConfig.RegisterRoutes(RouteTable.Routes);
            // BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
