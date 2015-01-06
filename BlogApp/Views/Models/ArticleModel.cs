@@ -10,8 +10,8 @@ namespace BlogApp.Views.Models
     {
         public ArticleModel()
         {
-            Title = "Default TITLE";
-            Body = "<p>SOME BODY TEXT</p>";
+            Title = "About Me";
+            Body = "<p>Шараев Владислав. Учусь в БГУИР по специальности \"инженер-системотехник\".<p>.<p>.<p>.<p>.<p>.<p>.<p>.</p>";
             Date = DateTime.Now;
             Likes = new Collection<LikeModel>();
             Comments = new Collection<CommentItemModel>();

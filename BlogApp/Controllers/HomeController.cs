@@ -11,10 +11,9 @@ namespace BlogApp.Controllers
         //
         // GET: /Home/
 
-        public ActionResult Index()
+        public ActionResult Index(int id = 0)
         {
             var model = new BlogApp.Views.Models.ArticleModel();
-            //model.Body = "<p>1111111111111111111<p>";
             return View(model);
         }
 

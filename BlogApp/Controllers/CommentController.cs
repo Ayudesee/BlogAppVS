@@ -9,9 +9,13 @@ namespace BlogApp.Controllers
 {
     public class CommentController : Controller
     {
-        //
-        // GET: /Comment/
-
+        public ContentResult Index()
+        {
+            return new ContentResult()
+            {
+                Content = "Test Comment INDEX()"
+            };
+        }
         public ActionResult Recent()
         {
             var model = new RecentCommentsModel();

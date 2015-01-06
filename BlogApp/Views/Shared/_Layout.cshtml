@@ -17,9 +17,9 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="#">Latest Post</a></li>
-                    <li><a href="#">Archive</a></li>
-                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Архив</a></li>
+                    <li><a href="#">Обо мне</a></li>
                 </ul>
             </div>
             <div class="search-form">
@@ -28,8 +28,6 @@
             </div>
             @Html.Action("Recent", "Post")
             @Html.Action("Recent", "Comment")
-            @*Html.Partial("RecentPosts", Model.RecentPosts)
-            @Html.Partial("RecentComments", Model.RecentComments)*@
         </div>
         <div class="right-column">
             @RenderBody()
