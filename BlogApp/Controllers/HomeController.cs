@@ -12,6 +12,11 @@ namespace BlogApp.Controllers
     public class HomeController : Controller
     {
         [HttpGet]
+        public ActionResult Post4()
+        {
+
+        }
+        [HttpGet]
         public ActionResult Index(string title)
         {
             if(title == null)

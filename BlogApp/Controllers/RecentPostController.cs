@@ -12,12 +12,6 @@ namespace BlogApp.Controllers
 {
     public class RecentPostController : Controller
     {
-        //public ActionResult Recent()
-        //{
-        //    var model = new RecentPostsModel();
-        //    return View(model);
-        //}
-
         public ActionResult Recent()
         {
             ICollection<RecentPostItemModel> Items = new Collection<RecentPostItemModel>();
@@ -30,13 +24,10 @@ namespace BlogApp.Controllers
             int r = 0;
             while (reader.Read() && r < 3)
             {
-                
-
                 RecentPostItemModel PostObj = new RecentPostItemModel();
                 PostObj.Text = reader["Title"].ToString();
                 r++;
                 Items.Add(PostObj);
-                
             }
             var model = new RecentPostsModel(Items);
             connect.Dispose();

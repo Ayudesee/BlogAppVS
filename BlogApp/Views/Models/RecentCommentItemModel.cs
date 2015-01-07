@@ -12,9 +12,11 @@ namespace BlogApp.Views.Models
             Text = "Some Text for Recent Comments";
             URL = "http://vk.com/";
             Date = DateTime.Now.AddDays(-1);
+            Username = "DefUsername";
         }
         
         public string Text { get; set; }
+        public string Username { get; set; }
         public string URL { get; set; }
         public DateTime Date { get; set; }
     }
