@@ -20,7 +20,7 @@
     <ul class="list-comment">
         @if(Model.Comments != null)
         { 
-            foreach (string item in Model.Comments)
+            foreach (var item in Model.Comments.Zip(Model.Usernames, (a, b) => new { A = a, B = b }))
             {
                 <li>
                     <div class="avatar">
@@ -30,8 +30,11 @@
                         <p class="date">
                             <span>@DateTime.Now.ToString("D")</span><span>@DateTime.Now.ToString("T")</span>
                         </p>
-                        <p>
-                            @item
+                        <p class="Username">
+                            @item.B
+                        </p>
+                        <p class="Comment">
+                            @item.A
                         </p>
                     </div>
                 </li>

@@ -9,9 +9,6 @@ namespace BlogApp.Controllers
 {
     public class RecentPostController : Controller
     {
-        //
-        // GET: /Posts/
-
         public ActionResult Recent()
         {
             var model = new RecentPostsModel();

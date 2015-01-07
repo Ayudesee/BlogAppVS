@@ -10,7 +10,7 @@ namespace BlogApp.Views.Models
     {
         [Required(ErrorMessage="Пожалуйста, введите ваш комментарий.")]
         public string Comment { get; set; }
-        
-        public UserModel User { get; set; }
+
+        public string Username { get; set; }
     }
 }

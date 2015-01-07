@@ -15,6 +15,7 @@ namespace BlogApp.Repository
         {
             PostModel postModel = null;
             Collection<string> comments = null;
+            Collection<string> usernames = null;
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["mssql"].ConnectionString))
             {
                 connection.Open();
@@ -40,28 +41,31 @@ namespace BlogApp.Repository
 
                     command.Parameters.Add(new SqlParameter("title", title));
                     comments = new Collection<string>();
+                    usernames = new Collection<string>();
                     using(var dataReader = command.ExecuteReader())
                     {
                         while(dataReader.Read())
                         {
                             comments.Add(dataReader["Body"].ToString());
+                            usernames.Add(dataReader["Username"].ToString());
                         }
                     }
                 }
             }
-            return new ArticleModel(postModel, comments);
+            return new ArticleModel(postModel, comments, usernames);
         }
 
-        public void AddComment(string title, string comment)
+        public void AddComment(string title, string comment, string Username)
         {
             using(var sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["mssql"].ConnectionString))
             {
                 using( var sqlCommand = new SqlCommand(@"INSERT INTO Comment
-                    SELECT PostID, @comment AS MyPost
+                    SELECT PostID, @comment, @Username AS MyPost
                     FROM Post
                     WHERE Title = @title"))
                 {
                     sqlCommand.Parameters.Add(new SqlParameter("comment", comment));
+                    sqlCommand.Parameters.Add(new SqlParameter("Username", Username));
                     sqlCommand.Parameters.Add(new SqlParameter("title", title));
                     sqlCommand.Connection = sqlConnection;
                     sqlConnection.Open();
@@ -69,6 +73,5 @@ namespace BlogApp.Repository
                 }
             }
         }
-
     }
 }

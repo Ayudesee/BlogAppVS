@@ -2,7 +2,7 @@ a {color: #4f9a9a; text-decoration: none;}
 p {color: #505050; font-size: 14px;}
 
 body {background:  #eee9bf;}
-.wrap {font-family: Tahoma; overflow: hidden; padding-bottom: 15px; background: #fff; box-shadow: 0 0 4px 2px #dfdfdf; margin-bottom: 60px;}
+.wrap {font-family: Tahoma; overflow: hidden; padding-bottom: 15px; padding-top: 15px; background: #fff; box-shadow: 0 0 4px 2px #dfdfdf; margin-bottom: 60px;}
 
 .left-column {float: left; width: 280px;}
 .right-column {overflow: hidden; padding: 20px 40px 0 20px;}
@@ -19,15 +19,21 @@ body {background:  #eee9bf;}
 .wrap-soc-list ul li span {margin-left: 5px;}
 .wrap-soc-list ul li span,.wrap-soc-list ul li img  {vertical-align: middle}
 
+
 .wrap-comments h2 {line-height: 43px; padding-left: 11px; color: #fff; background: #75af68; font-weight: normal; font-size: 24px;}
 .wrap-comments .list-comment li {list-style: none; overflow: hidden; padding: 20px 0 20px; margin-bottom: 10px; border-bottom: 1px solid #e2e2e2;}
 .wrap-comments .list-comment li .avatar {float: left; padding-right: 10px;}
 .wrap-comments .list-comment li .comment-text {overflow: hidden;}
 .wrap-comments .list-comment li .date {color: #959595}
 .wrap-comments .list-comment li .date span {display: inline-block; margin-right: 20px; padding: 7px 0;}
+.wrap-comments .list-comment li .Username {font-size: 18px; color: #68af93}
 
 .add-comment {padding-top: 10px;}
 .add-comment .txt-area {width: 100%; padding: 10px; height: 90px; border-radius: 5px; border-color: #dcdcdc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;}
+.txt-box {width: 200px; padding: 10px; height: 10px; border-radius: 5px; border-color: #dcdcdc;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;}
@@ -65,7 +71,6 @@ textarea:-ms-input-placeholder {color: #ced7d7;}
 .posts-wrap li {padding-top: 20px; list-style: none;}
 .posts-wrap li .date {color: #959595; font-size: 14px; margin-bottom: 5px;}
 .posts-wrap li .post {font-size: 16px;}
-
 
 @media screen and (min-width: 980px) {
     .wrap {width: 980px; margin: 0 auto 60px;}

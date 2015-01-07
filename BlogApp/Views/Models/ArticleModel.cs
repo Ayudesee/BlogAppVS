@@ -18,12 +18,13 @@ namespace BlogApp.Views.Models
             Likes.Add(new LikeModel());
             this.NewComment = new AddCommentModel();
         }
-        public ArticleModel(PostModel postModel, ICollection<string> comments)
+        public ArticleModel(PostModel postModel, ICollection<string> comments, ICollection<string> usernames)
         {
             this.Title = postModel.Title;
             this.Body = postModel.Body;
             this.Date = postModel.Date;
             this.Comments = comments;
+            this.Usernames = usernames;
         }
         public string Title { get; set; }
         public string Body { get; set; } 
@@ -31,6 +32,7 @@ namespace BlogApp.Views.Models
 
         public ICollection<LikeModel> Likes { get; set; }
         public ICollection<string> Comments { get; set; }
+        public ICollection<string> Usernames { get; set; }
         public AddCommentModel NewComment { get; set; }
     }
 }

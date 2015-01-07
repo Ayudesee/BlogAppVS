@@ -9,6 +9,6 @@ namespace BlogApp.Views.Models
     {
         public string Body { get; set; }
         public DateTime Date { get; set; }
-        public UserModel User { get; set; }
+        public string Username { get; set; }
     }
 }

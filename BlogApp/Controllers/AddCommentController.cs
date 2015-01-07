@@ -9,9 +9,6 @@ namespace BlogApp.Controllers
 {
     public class AddCommentController : Controller
     {
-        //
-        // GET: /AddComment/
-
         public ActionResult Index()
         {
             var model = new AddCommentModel();
