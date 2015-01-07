@@ -7,11 +7,14 @@ using System.Web.Mvc;
 
 namespace BlogApp.Controllers
 {
-    public class ArticleController : Controller
+    public class AddCommentController : Controller
     {
-        public ActionResult Recent()
+        //
+        // GET: /AddComment/
+
+        public ActionResult Index()
         {
-            var model = new ArticleModel();
+            var model = new AddCommentModel();
             return View(model);
         }
 

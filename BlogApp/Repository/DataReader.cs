@@ -37,6 +37,7 @@ namespace BlogApp.Repository
                 using(var command = new SqlCommand("SELECT Comment.* FROM Comment INNER JOIN Post ON Comment.PostID = Post.PostID WHERE Post.Title = @title"))
                 {
                     command.Connection = connection;
+
                     command.Parameters.Add(new SqlParameter("title", title));
                     comments = new Collection<string>();
                     using(var dataReader = command.ExecuteReader())

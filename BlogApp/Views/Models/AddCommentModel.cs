@@ -8,8 +8,7 @@ namespace BlogApp.Views.Models
 {
     public class AddCommentModel
     {
-        //[Required(ErrorMessage="Пожалуйста, введите ваш комментарий.")]
-        //[RegularExpression(@"[a-zа-я]+")]
+        [Required(ErrorMessage="Пожалуйста, введите ваш комментарий.")]
         public string Comment { get; set; }
         
         public UserModel User { get; set; }

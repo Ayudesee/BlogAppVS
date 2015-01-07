@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace BlogApp.Controllers
 {
-    public class CommentController : Controller
+    public class RecentCommentController : Controller
     {
         public ContentResult Index()
         {

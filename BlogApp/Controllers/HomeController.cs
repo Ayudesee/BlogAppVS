@@ -10,16 +10,6 @@ namespace BlogApp.Controllers
 {
     public class HomeController : Controller
     {
-        //
-        // GET: /Home/
-      
-        //[HttpGet]
-        //public ActionResult Index()
-        //{
-        //    string query = Request.QueryString["Foo"];
-        //    var model = new ArticleModel();
-        //    return View(model);
-        //}
         [HttpGet]
         public ActionResult Index(string title)
         {
@@ -30,26 +20,28 @@ namespace BlogApp.Controllers
             var readers = new DataReader();
             return View(readers.GetArticleModel(title));
         }
+
         [HttpPost]
         public ActionResult Index(AddCommentModel model)//Отличается
+        //public ActionResult Index(ArticleModel model)
         {
             var title = "This is my FIRST TITLE FROM DATABASE";
-
+            var readers = new DataReader();
 
             if (!string.IsNullOrWhiteSpace(model.Comment))
             {
-                var readers = new DataReader();
+                
                 readers.AddComment(title, model.Comment);
-                //CommentsRepository.Comments.Add(model.Comment);
+
                 return View(readers.GetArticleModel(title));
             }
-            return View(model);
+            return View(readers.GetArticleModel(title));
         }
         
 
-        //public ActionResult AddComment(AddCommentModel model)
-        //{
-        //    return RedirectToAction("Index", "Home");
-        //}
+        public ActionResult AddComment(AddCommentModel model)
+        {
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

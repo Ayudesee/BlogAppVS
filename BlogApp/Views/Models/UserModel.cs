@@ -8,7 +8,8 @@ namespace BlogApp.Views.Models
 {
     public class UserModel
     {
-        public int Age { get; set; }
+        public string Email { get; set; }
         public string Username { get; set; }
+        //Avatar
     }
 }

@@ -16,28 +16,21 @@ namespace BlogApp.Views.Models
             Date = DateTime.Now;
             Likes = new Collection<LikeModel>();
             Likes.Add(new LikeModel());
+            this.NewComment = new AddCommentModel();
         }
         public ArticleModel(PostModel postModel, ICollection<string> comments)
         {
             this.Title = postModel.Title;
             this.Body = postModel.Body;
             this.Date = postModel.Date;
-            //this.Comments = comments; 
-
+            this.Comments = comments;
         }
         public string Title { get; set; }
         public string Body { get; set; } 
         public DateTime Date { get; set; }
 
         public ICollection<LikeModel> Likes { get; set; }
-
-        public ICollection<string> Comments
-        {
-            get
-            {
-                return CommentsRepository.Comments; 
-            }
-        }
-        //public AddCommentModel NewComment { get; set; }
+        public ICollection<string> Comments { get; set; }
+        public AddCommentModel NewComment { get; set; }
     }
 }
