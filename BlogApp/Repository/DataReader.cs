@@ -72,6 +72,7 @@ namespace BlogApp.Repository
                     sqlCommand.ExecuteNonQuery();
                 }
             }
+        
         }
     }
 }

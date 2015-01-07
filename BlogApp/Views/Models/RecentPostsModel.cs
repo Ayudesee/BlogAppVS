@@ -15,6 +15,12 @@ namespace BlogApp.Views.Models
             Items.Add(new RecentPostItemModel());
             Items.Add(new RecentPostItemModel());
         }
+        public RecentPostsModel(ICollection<RecentPostItemModel> Items)
+        {
+            this.Items = Items;
+        }
         public ICollection<RecentPostItemModel> Items{ get; set; }
+
+
     }
 }
