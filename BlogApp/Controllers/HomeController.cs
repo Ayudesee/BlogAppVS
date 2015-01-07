@@ -31,11 +31,19 @@ namespace BlogApp.Controllers
             return View(readers.GetArticleModel(title));
         }
         [HttpPost]
-        public ActionResult Index(AddCommentModel model)
+        public ActionResult Index(AddCommentModel model)//Отличается
         {
-            if(!string.IsNullOrWhiteSpace(model.Comment))
-                CommentsRepository.Comments.Add(model.Comment);
-            return View(new ArticleModel());
+            var title = "This is my FIRST TITLE FROM DATABASE";
+
+
+            if (!string.IsNullOrWhiteSpace(model.Comment))
+            {
+                var readers = new DataReader();
+                readers.AddComment(title, model.Comment);
+                //CommentsRepository.Comments.Add(model.Comment);
+                return View(readers.GetArticleModel(title));
+            }
+            return View(model);
         }
         
 
