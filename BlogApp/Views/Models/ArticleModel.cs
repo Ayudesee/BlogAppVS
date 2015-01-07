@@ -15,15 +15,22 @@ namespace BlogApp.Views.Models
             Body = "<p>Шараев Владислав. Учусь в БГУИР по специальности \"инженер-системотехник\"</p>";
             Date = DateTime.Now;
             Likes = new Collection<LikeModel>();
-            //Comments = new Collection<CommentItemModel>();
             Likes.Add(new LikeModel());
-            //Comments.Add(new CommentItemModel());
+        }
+        public ArticleModel(PostModel postModel, ICollection<string> comments)
+        {
+            this.Title = postModel.Title;
+            this.Body = postModel.Body;
+            this.Date = postModel.Date;
+            //this.Comments = comments; 
+
         }
         public string Title { get; set; }
         public string Body { get; set; } 
         public DateTime Date { get; set; }
 
         public ICollection<LikeModel> Likes { get; set; }
+
         public ICollection<string> Comments
         {
             get

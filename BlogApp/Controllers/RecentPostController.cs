@@ -7,15 +7,16 @@ using System.Web.Mvc;
 
 namespace BlogApp.Controllers
 {
-    public class ArticleController : Controller
+    public class RecentPostController : Controller
     {
         //
-        // GET: /Article/
+        // GET: /Posts/
 
         public ActionResult Recent()
         {
-            var model = new ArticleModel();
+            var model = new RecentPostsModel();
             return View(model);
         }
+
     }
 }

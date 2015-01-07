@@ -8,6 +8,6 @@ namespace BlogApp.Repository
 {
     public class CommentsRepository
     {
-        public static readonly ICollection<string> Comments = new Collection<string>(); 
+        public static ICollection<string> Comments = new Collection<string>(); 
     }
 }

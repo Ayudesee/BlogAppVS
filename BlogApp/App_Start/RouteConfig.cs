@@ -13,12 +13,8 @@ namespace BlogApp
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "CommentID",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                constraints: new { id = @"(\d+)?"}
-            );
+            routes.MapRoute("Post", "post-{title}", new { Controller = "Home", action = "Index" });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

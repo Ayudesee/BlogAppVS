@@ -5,17 +5,19 @@
     <h2>@Model.Title</h2>
     <p class="date"><span>@Model.Date.ToString("D")</span><span>@Model.Date.ToString("t")</span></p>
     <div class="text-block">
-        @Html.Raw(Model.Body)
+        <p>
+            @Html.Raw(Model.Body)
+        </p>
     </div>
 </div>
-<div class="wrap-soc-list">
+@*<div class="wrap-soc-list">
     <ul>
         @foreach (var item in Model.Likes)
         {
             <li><a href="#"><img src="~/Content/images/fc-ico.png" alt="" /><span>@item.likesCount</span></a></li>
         }
     </ul>
-</div>
+</div>*@
 <div class="wrap-comments">
     <h2>Комментарии</h2>
     <ul class="list-comment">

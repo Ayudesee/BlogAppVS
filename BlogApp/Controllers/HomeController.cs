@@ -13,17 +13,27 @@ namespace BlogApp.Controllers
         //
         // GET: /Home/
       
+        //[HttpGet]
+        //public ActionResult Index()
+        //{
+        //    string query = Request.QueryString["Foo"];
+        //    var model = new ArticleModel();
+        //    return View(model);
+        //}
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index(string title)
         {
-            string query = Request.QueryString["Foo"];
-            var model = new ArticleModel();
-            return View(model);
+            if(title == null)
+            {
+                title = "This is my FIRST TITLE FROM DATABASE";
+            }
+            var readers = new DataReader();
+            return View(readers.GetArticleModel(title));
         }
         [HttpPost]
         public ActionResult Index(AddCommentModel model)
         {
-            if (!string.IsNullOrWhiteSpace(model.Comment))
+            if(!string.IsNullOrWhiteSpace(model.Comment))
                 CommentsRepository.Comments.Add(model.Comment);
             return View(new ArticleModel());
         }
