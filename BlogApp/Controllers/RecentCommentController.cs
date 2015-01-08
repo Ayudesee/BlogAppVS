@@ -36,6 +36,11 @@ namespace BlogApp.Controllers
             reader.Dispose();
             return View(model);
         }
+        public ActionResult ByID(int ID)
+        {
+            var model = new ArticleModel();
+            return View(model);
+        }
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using BlogApp.Views.Models;
+﻿using BlogApp.Repository;
+using BlogApp.Views.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -36,5 +37,6 @@ namespace BlogApp.Controllers
             return View(model);
             
         }
+        
     }
 }

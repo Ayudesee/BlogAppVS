@@ -14,6 +14,10 @@ namespace BlogApp.Controllers
             var model = new ArticleModel();
             return View(model);
         }
+        public ContentResult GetByUrl(string SeoURL)
+        {
+            return new ContentResult() { Content = "#" + SeoURL + "+" };
+        }
 
     }
 }

@@ -12,11 +12,6 @@ namespace BlogApp.Controllers
     public class HomeController : Controller
     {
         [HttpGet]
-        public ActionResult Post4()
-        {
-
-        }
-        [HttpGet]
         public ActionResult Index(string title)
         {
             if(title == null)
@@ -29,7 +24,7 @@ namespace BlogApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(AddCommentModel model)
+        public ActionResult AddComment(AddCommentModel model)
         {
             var title = "This is my FIRST TITLE FROM DATABASE";
             var readers = new DataReader();
@@ -56,13 +51,19 @@ namespace BlogApp.Controllers
             }
                 return View(readers.GetArticleModel(title));
         }
-           
+
+        //[HttpGet]
+        //public ActionResult Title(string id)
+        //{
+        //    var reader = new DataReader();
+        //    return View(reader.GetArticleModel(id));
+        //}
         
         
 
-        public ActionResult AddComment(AddCommentModel model)
-        {
-            return RedirectToAction("Index", "Home");
-        }
+        //public ActionResult AddComment(AddCommentModel model)
+        //{
+        //    return RedirectToAction("Index", "Home");
+        //}
     }
 }

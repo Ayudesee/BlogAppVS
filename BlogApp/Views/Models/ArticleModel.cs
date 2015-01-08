@@ -26,6 +26,10 @@ namespace BlogApp.Views.Models
             this.Comments = comments;
             this.Usernames = usernames;
         }
+        public ArticleModel(string Titlename)
+        {
+
+        }
         public string Title { get; set; }
         public string Body { get; set; } 
         public DateTime Date { get; set; }
